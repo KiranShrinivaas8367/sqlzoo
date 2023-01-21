@@ -1,0 +1,3 @@
+# SQL-ZOO
+
+A repository maintained for learning sql exercises in <a href="https://sqlzoo.net/">SQL-ZOO</a>.....
