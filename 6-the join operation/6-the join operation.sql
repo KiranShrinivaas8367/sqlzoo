@@ -69,3 +69,19 @@ Show the stadium and the number of goals scored in each stadium.
 select stadium,count(*) from
  goal join game on id = matchid
  group by stadium
+ 
+ #11
+ For every match involving 'POL', show the matchid, date and the number of goals scored.
+ 
+ SELECT matchid,mdate, count(*)
+  FROM game JOIN goal ON matchid = id 
+ WHERE (team1 = 'POL' OR team2 = 'POL') group by matchid,mdate
+ 
+ #12
+ For every match where 'GER' scored, show matchid, match date and the number of goals scored by 'GER'
+ 
+ select matchid,mdate,count(*) from game
+ join goal on id = matchid
+ where team1 = 'GER' or team2= 'GER'
+ and teamid='GER'
+ group by matchid,mdate
