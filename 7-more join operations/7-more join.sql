@@ -38,4 +38,30 @@ select name from actor
  where movieid=27
  
 #7
+Obtain the cast list for the film 'Alien'
 
+select name from actor
+ join casting on id=actorid
+ where movieid=35
+ 
+#8
+List the films in which 'Harrison Ford' has appeared
+
+select title from movie
+ join casting on id = movieid
+ where actorid = 6 
+ 
+#9
+List the films where 'Harrison Ford' has appeared - but not in the starring role.
+
+select title from movie
+ join casting on id = movieid
+ where actorid = 6 and ord>1
+ 
+#10
+List the films together with the leading star for all 1962 films.
+
+select title,name from movie
+ join casting on id=movieid
+ join actor on actorid = actor.id
+ where yr=1962 and ord =1
